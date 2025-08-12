@@ -1,5 +1,4 @@
 {% load static %}
-
 <div class="row mt-5">
     <div class="col-lg-12">
         <h1 class="display-4 title mb-0" id="competences">
@@ -12,12 +11,7 @@
             <div class="col-lg-2 col-sm-6 justify-content-center mt-3" data-toggle="modal" data-target=".competance-model-{{competence.id}}">
                     <div class="competence-card text-center mirror-face">
                         <div class="card-body">
-                            {% if competence.image %}
-                                <img class="competence-img" alt="{{competence.title}} logo" src="{{ competence.image.url }}">
-                            {% else %}
-                                <img class="competence-img" alt="{{competence.title}} logo" src="{% static 'fixed_media/coding_logo.jpg' %}">
-                            {% endif %}
-
+                            <img class="competence-img" alt="{{competence.title}} logo" src="{% static 'img/page-not-found.png' %}">
                             <p class="font-weight-normal pt-2 mb-0">{{competence.title}}</p>
                         </div>
                     </div>
