@@ -1,5 +1,5 @@
 {% extends 'base.html' %}{% load filter_tags %}
-
+{% load static %}
 {% block content %}
 {% include 'navbar.html' %}
 <div class="container">
@@ -9,10 +9,9 @@
             <hr class="mt-2 mb-0">
         </div>
         <div class="col-lg-10 col-12">
-            {% load static %}
-            {% if project.title == "Portfolio" %}
+            {% if project.title == "Portfolioz" %}
                 <img class="d-block w-100 project-image" src="{% static 'img/portfoloiz.jpg' %}" alt="{{project.title}} (img)">
-            {% elif project.title == "Heartbitz" %}
+            {% elif project.title == "HeartBitz" %}
                 <img class="d-block w-100 project-image" src="{% static 'img/heartbitz-img.jpg' %}" alt="{{project.title}} (img)">
             {% elif project.image %}
                 <img class="d-block w-100 project-image" src="{{ project.image.url }}" alt="{{project.title}} (img)">
