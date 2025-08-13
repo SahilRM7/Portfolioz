@@ -9,7 +9,16 @@
             <hr class="mt-2 mb-0">
         </div>
         <div class="col-lg-10 col-12">
-            <img class="d-block w-100 project-image" src="{{project.image.url}}" alt="{{project.title}} (img)">
+            {% load static %}
+            {% if project.title == "Portfolio" %}
+                <img class="d-block w-100 project-image" src="{% static 'img/portfoloiz.jpg' %}" alt="{{project.title}} (img)">
+            {% elif project.title == "Heartbitz" %}
+                <img class="d-block w-100 project-image" src="{% static 'img/heartbitz-img.jpg' %}" alt="{{project.title}} (img)">
+            {% elif project.image %}
+                <img class="d-block w-100 project-image" src="{{ project.image.url }}" alt="{{project.title}} (img)">
+            {% else %}
+                <img class="d-block w-100 project-image" src="{% static 'img/default_project.jpg' %}" alt="{{project.title}} (img)">
+            {% endif %}
         </div>
         <div class="col-12 text-left">
             <p class="mini-title">Description:</p>
