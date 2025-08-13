@@ -31,7 +31,15 @@
                     <a href="{{project.get_project_absolute_url}}">
                         <div class="project-card mirror-face">
                                 <div class="project-card-img">
-                                    <img src="{{project.image.url}}">
+                                    {% if forloop.counter == 1 %}
+                                        <img src="{% static 'img/portfolioz-img.png' %}" alt="">
+                                    {% elif forloop.counter == 2 %}
+                                        <img src="{% static 'img/heartbitz-img.jpg' %}" alt="">
+                                    {% elif forloop.counter == 3 %}
+                                        <img src="{% static 'img/heartbitz-img.jpg' %}" alt="">
+                                    {% else %}
+                                        <img src="{% static 'img/home.svg' %}" alt="">
+                                    {% endif %}
                                 </div>
                             <div class="card-body pt-0">
                                 <h1 class="project-card-title">{{project.title|truncatechars:22}}</h1>
