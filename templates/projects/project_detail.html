@@ -43,6 +43,8 @@
                 <img class="d-block w-100 project-image" src="{% static 'img/portfoloiz-img.png' %}" alt="{{project.title}} (img)">
             {% elif project.title == "HeartBitz" %}
                 <img class="d-block w-100 project-image" src="{% static 'img/heartbitz-img.jpg' %}" alt="{{project.title}} (img)">
+            {% elif project.title == "FeatherScan" %}
+                <img class="d-block w-100 project-image" src="{% static 'img/featherscan-img.png' %}" alt="{{project.title}} (img)">
             {% elif project.image %}
                 <img class="d-block w-100 project-image" src="{{ project.image.url }}" alt="{{project.title}} (img)">
             {% else %}
